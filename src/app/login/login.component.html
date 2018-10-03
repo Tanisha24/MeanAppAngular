@@ -1,0 +1,29 @@
+<!-- Three -->
+        <section id="three" class="wrapper fullscreen style1 fade-up">
+          <div class="inner">
+
+
+                <h2>Login</h2>
+                <p>Login here and see details of ICC World Cup over years.</p>
+              <div class=" style2">
+                  <section>
+                    <form (submit)=onLoginSubmit()>
+                      <div class="fields">
+                        <div class="field half">
+                          <label for="name">Username</label>
+                          <input type="text" name="name" [(ngModel)]="username" id="name" />
+                        </div>
+                        <div class="field half">
+                          <label for="email">Password</label>
+                          <input type="password" name="password" [(ngModel)]="password" id="email" />
+                        </div>
+
+                      </div>
+                      <ul class="actions">
+                        <li><button class="button primary" type="submit" >Login</button></li>
+                      </ul>
+                    </form>
+                  </section>
+          </div>
+          </div>
+        </section>

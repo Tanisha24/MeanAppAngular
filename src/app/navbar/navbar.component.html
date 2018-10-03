@@ -1,0 +1,19 @@
+
+					<nav>
+						<ul>
+
+
+							<li>  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">home</a></li>
+							<li *ngIf="authService.loggedIn()">  <a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">login</a></li>
+							<li *ngIf="authService.loggedIn()">	<a routerLink="/register" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">register</a></li>
+							<li *ngIf="authService.loggedIn()"><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">About</a></li>
+							<li *ngIf="!authService.loggedIn()">	<a routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">profile</a></li>
+							<li *ngIf="!authService.loggedIn()">	<a routerLink="/year2015" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">2015</a></li>
+							<li *ngIf="!authService.loggedIn()">	<a routerLink="/year2011" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">2011</a></li>
+							<li *ngIf="!authService.loggedIn()">	<a routerLink="/mapbox" routerLinkActive="active" [routerLinkActiveOptions] = "{exact:true}">mapbox</a></li>
+
+
+							<li *ngIf="!authService.loggedIn()"><a (click)="onLogoutClick()"  href="#">Logout</a></li>
+
+						</ul>
+					</nav>

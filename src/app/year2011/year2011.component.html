@@ -1,0 +1,112 @@
+
+
+
+  <section id="one" class="wrapper style3 spotlights">
+  						<section>
+
+  							<div class="content">
+  								<div class="inner">
+
+
+                    <iframe width="800" height="600" src="https://datastudio.google.com/embed/reporting/1FFiffs5WVXMiiHJAHzyPwBvm5S5GnRIx/page/QnoY" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+                	</div>
+  							</div>
+  						</section>
+              <section>
+
+                <div class="content">
+                  <div class="inner">
+                    <h2>Finals Details</h2>
+                    <div class="row">
+
+                      <div class="col-6 col-12-medium">
+
+                          <div>
+                      <ul>
+                      <li>
+  											<b>Host:</b> India, Pakistan, Sri Lanka, Bangladesh
+                        </li>
+
+                          <li>
+                            Stadium: Wankhede Stadium
+                            </li>
+                            <li>
+                              City: Mumbai
+                              </li>
+                            <li>
+                              Player of the Series: Yuvraj Singh
+                              </li>
+                              <li>
+                                Man of the Match of finals: Mahendra Singh Dhoni
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                          <div class="col-6 col-12-medium">
+                              <div >
+                          <ul>
+                          <li>
+      											Team1: Sri Lanka
+                            </li>
+                            <li>
+                              Team2: India
+                              </li>
+                              <li>
+                                Winner: India
+                                </li>
+                                <li>
+                                  Margin: 6 wickets
+                                  </li>
+                                </ul>
+</div>
+                              </div>
+                            </div>
+
+                  </div>
+                </div>
+              </section>
+              <div class="inner">
+
+
+                    <h2>Post your Views</h2>
+
+                  <div class=" split style2">
+                      <section>
+                        <form #userForm="ngForm" (submit)=onReviewSubmit(userForm)>
+                          <div class="fields">
+
+                            <div class="field ">
+                              <label for="email">Description</label>
+                              <input type="text" name="review" [(ngModel)]="review" id="review" />
+                            </div>
+                          </div>
+
+                          <ul class="actions">
+                            <li><button class="button primary" type="submit" >Submit</button></li>
+                            <li><button class="button" type="button" (click)="resetForm(userForm)">Reset</button></li>
+                          </ul>
+                        </form>
+                      </section>
+                      <section>
+              <ul class="alt">
+                <li>
+                  <i>See what others have to say!</i>
+                </li>
+                <div *ngFor="let use of recordService.views" >
+                <li  *ngIf="(use.year==2011)">
+         {{use.username}} : {{use.review}}
+          </li>
+          </div>
+
+
+              </ul>
+            </section>
+
+              </div>
+            </div>
+
+
+
+  					</section>

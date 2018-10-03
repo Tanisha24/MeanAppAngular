@@ -1,0 +1,46 @@
+<section id="one" class="wrapper fullscreen style3 spotlights">
+            <section>
+
+              <div class="content">
+                <div class="inner">
+
+                  <div *ngIf="user">
+                    <h2 > Welcome {{user.name}}</h2>
+                    <ul class="alt">
+                      <li >Username : {{user.username}}</li>
+                      <li >Email : {{user.email}}</li>
+                    </ul>
+                  </div>
+                  <h3 > Your Reviews</h3>
+
+              <table class="responsive-table highlight">
+                  <thead>
+                    <tr>
+
+                      <th>Year</th>
+                      <th>Review</th>
+                      <th></th>
+
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let use of recordService.views">
+                    
+                    <td *ngIf="(use.username==user.username)">{{use.year}}</td>
+                    <td *ngIf="(use.username==user.username)">{{use.review}}</td>
+                    <td *ngIf="(use.username==user.username)">
+
+                        <a class="action-btn" (click)="onDelete(use._id)">
+                          <i class="material-icons">delete</i>
+                        </a>
+                      </td>
+                  </tr>
+                </table>
+
+
+
+
+
+                </div>
+              </div>
+            </section>
+          </section>

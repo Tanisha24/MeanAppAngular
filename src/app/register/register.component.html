@@ -1,0 +1,40 @@
+<section id="three" class="wrapper fullscreen style1 fade-up">
+  <div class="inner">
+
+
+        <h2>Register</h2>
+        <p>Register here and see details of ICC World Cup over years.</p>
+      <div class=" style2">
+          <section>
+            <form (submit)=onRegisterSubmit()>
+              <div class="fields">
+                <div class="field half">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" [(ngModel)]="name" id="name" />
+
+                </div>
+                <div class="field half">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" [(ngModel)]="email" id="email" />
+                </div>
+              </div>
+              <div class="fields">
+                <div class="field half">
+                  <label for="name">Username</label>
+                  <input type="text" name="name" [(ngModel)]="username" id="username" />
+                </div>
+                <div class="field half">
+                  <label for="email">Password</label>
+                  <input type="password" name="password" [(ngModel)]="password" id="password" />
+                </div>
+
+              </div>
+              <ul class="actions">
+                <li><button class="button primary" type="submit" >Submit</button></li>
+              </ul>
+            </form>
+          </section>
+
+  </div>
+</div>
+</section>
